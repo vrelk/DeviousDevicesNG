@@ -36,7 +36,7 @@ bool DeviousDevices::InventoryFilter::TakeFilter(RE::Actor* a_actor, RE::TESBoun
     std::mt19937 gen(rd());
     std::uniform_real_distribution<> distr(0.0f, 100.0f);
 
-    bool loc_rollFailure = distr(gen) < 80.0f;
+    bool loc_rollFailure = true; //distr(gen) < 80.0f;
 
     if (loc_rollFailure) {
         RE::DebugNotification("Locked in bondage mittens, you cannot pick up the item.");
